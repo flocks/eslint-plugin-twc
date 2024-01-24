@@ -1,12 +1,12 @@
 {
   "name": "eslint-plugin-twc",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Enforce prefixes for React-twc Components",
+  "main": "eslint-plugin-twc.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Florent Teissier",
   "license": "ISC"
 }
