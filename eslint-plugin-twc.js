@@ -18,13 +18,14 @@ module.exports = {
             if (!variableName) return;
 
             const isTwcDeclaration =
-              node.init.type === "TaggedTemplateExpression";
+              node.init.type === "TaggedTemplateExpression" &&
+              node.init.tag.object.name === "twc";
 
             if (isTwcDeclaration) {
               if (!variableName.startsWith(prefix)) {
                 context.report({
                   node,
-                  message: `Variable '${variableName}' should not start with '${prefix}'`,
+                  message: `Variable '${variableName}' should start with '${prefix}'`,
                   fix: (fixer) => {
                     return fixer.replaceText(
                       node.id,
